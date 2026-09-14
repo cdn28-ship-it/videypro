@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>🎬TOP VIRAL</title>
+
+
+  <!-- =================================
+       FACEBOOK / OPEN GRAPH
+  ================================== -->
+
+  <meta property="og:title"
+        content="🎬TOP VIRAL">
+
+  <meta property="og:description"
+        content="Tonton video selengkapnya di sini.">
+
+  <meta property="og:image"
+        content="https://jpcdn.it/img/a849a66659a389ae4b2b59230bcba18d.jpg">
+
+  <meta property="og:image:width"
+        content="1200">
+
+  <meta property="og:image:height"
+        content="630">
+
+  <meta property="og:type"
+        content="website">
+
+
+  <!-- =================================
+       CSS
+  ================================== -->
+
+  <style>
+
+    /* ==============================
+       RESET
+    =============================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    /* ==============================
+       BODY
+    =============================== */
+
+    body {
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      background:
+        #0b0b0b;
+
+      color:
+        #ffffff;
+
+      min-height:
+        100vh;
+
+    }
+
+
+    /* ==============================
+       MAIN PAGE
+    =============================== */
+
+    .page {
+
+      width:
+        100%;
+
+      max-width:
+        900px;
+
+      margin:
+        0 auto;
+
+      padding:
+        20px;
+
+    }
+
+
+    /* ==============================
+       HEADER
+    =============================== */
+
+    .header {
+
+      text-align:
+        center;
+
+      margin-bottom:
+        20px;
+
+    }
+
+
+    .header h1 {
+
+      font-size:
+        27px;
+
+      font-weight:
+        700;
+
+      margin-bottom:
+        8px;
+
+    }
+
+
+    .header p {
+
+      color:
+        #aaa;
+
+      font-size:
+        14px;
+
+    }
+
+
+    /* ==============================
+       VIDEO BOX
+    =============================== */
+
+    .video-box {
+
+      position:
+        relative;
+
+      width:
+        100%;
+
+      background:
+        #000;
+
+      border-radius:
+        14px;
+
+      overflow:
+        hidden;
+
+      box-shadow:
+        0 10px 35px
+        rgba(0,0,0,.55);
+
+    }
+
+
+    /* ==============================
+       VIDEO
+    =============================== */
+
+    video {
+
+      display:
+        block;
+
+      width:
+        100%;
+
+      height:
+        auto;
+
+      background:
+        #000;
+
+      transition:
+        filter .35s ease,
+        transform .35s ease;
+
+    }
+
+
+    /* ==============================
+       VIDEO BLUR
+    =============================== */
+
+    .video-box.is-locked video {
+
+      filter:
+        blur(14px);
+
+      transform:
+        scale(1.04);
+
+    }
+
+
+    /* ==============================
+       LOCK OVERLAY
+    =============================== */
+
+    .lock-overlay {
+
+      position:
+        absolute;
+
+      inset:
+        0;
+
+      z-index:
+        10;
+
+      display:
+        none;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      padding:
+        20px;
+
+      background:
+        rgba(0,0,0,.45);
+
+    }
+
+
+    .video-box.is-locked
+    .lock-overlay {
+
+      display:
+        flex;
+
+    }
+
+
+    /* ==============================
+       POPUP
+    =============================== */
+
+    .popup {
+
+      width:
+        100%;
+
+      max-width:
+        390px;
+
+      padding:
+        28px 24px;
+
+      text-align:
+        center;
+
+      background:
+        rgba(20,20,20,.97);
+
+      border:
+        1px solid
+        rgba(255,255,255,.12);
+
+      border-radius:
+        15px;
+
+      box-shadow:
+        0 15px 50px
+        rgba(0,0,0,.7);
+
+    }
+
+
+    .popup-icon {
+
+      font-size:
+        42px;
+
+      margin-bottom:
+        10px;
+
+    }
+
+
+    .popup h2 {
+
+      font-size:
+        22px;
+
+      margin-bottom:
+        10px;
+
+    }
+
+
+    .popup p {
+
+      color:
+        #ccc;
+
+      font-size:
+        14px;
+
+      line-height:
+        1.6;
+
+      margin-bottom:
+        20px;
+
+    }
+
+
+    /* ==============================
+       CONTINUE BUTTON
+    =============================== */
+
+    .continue-button {
+
+      width:
+        100%;
+
+      padding:
+        14px 20px;
+
+      border:
+        none;
+
+      border-radius:
+        9px;
+
+      background:
+        #2196f3;
+
+      color:
+        #fff;
+
+      font-size:
+        16px;
+
+      font-weight:
+        bold;
+
+      cursor:
+        pointer;
+
+      transition:
+        .2s;
+
+    }
+
+
+    .continue-button:hover {
+
+      background:
+        #1976d2;
+
+    }
+
+
+    .continue-button:active {
+
+      transform:
+        scale(.98);
+
+    }
+
+
+    /* ==============================
+       KUMPULAN VIDEO
+    =============================== */
+
+    .collection-link {
+
+      position:
+        relative;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      gap:
+        12px;
+
+      width:
+        100%;
+
+      margin-top:
+        14px;
+
+      padding:
+        16px 18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #2196f3,
+          #7b2ff7,
+          #f72585
+        );
+
+      border:
+        2px solid
+        rgba(255,255,255,.25);
+
+      border-radius:
+        13px;
+
+      color:
+        #ffffff;
+
+      text-decoration:
+        none;
+
+      text-align:
+        center;
+
+      overflow:
+        hidden;
+
+      box-shadow:
+        0 7px 22px
+        rgba(123,47,247,.35);
+
+      animation:
+        collectionPulse 2.2s
+        infinite;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+    }
+
+
+    /* ==============================
+       TEKS KUMPULAN VIDEO
+    =============================== */
+
+    .collection-content {
+
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      gap:
+        3px;
+
+    }
+
+
+    .collection-content strong {
+
+      font-size:
+        18px;
+
+      letter-spacing:
+        .5px;
+
+    }
+
+
+    .collection-content small {
+
+      font-size:
+        12px;
+
+      opacity:
+        .9;
+
+    }
+
+
+    /* ==============================
+       PANAH
+    =============================== */
+
+    .collection-arrow {
+
+      font-size:
+        20px;
+
+      animation:
+        arrowMove 1s
+        infinite;
+
+    }
+
+
+    /* ==============================
+       EFEK KILAU
+    =============================== */
+
+    .collection-link::after {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      top:
+        0;
+
+      left:
+        -120%;
+
+      width:
+        70%;
+
+      height:
+        100%;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(255,255,255,.35),
+          transparent
+        );
+
+      transform:
+        skewX(-20deg);
+
+      animation:
+        shine 3s
+        infinite;
+
+    }
+
+
+    /* ==============================
+       ANIMASI PULSE
+    =============================== */
+
+    @keyframes collectionPulse {
+
+      0% {
+
+        transform:
+          scale(1);
+
+      }
+
+      50% {
+
+        transform:
+          scale(1.025);
+
+      }
+
+      100% {
+
+        transform:
+          scale(1);
+
+      }
+
+    }
+
+
+    /* ==============================
+       ANIMASI PANAH
+    =============================== */
+
+    @keyframes arrowMove {
+
+      0% {
+
+        transform:
+          translateX(0);
+
+      }
+
+      50% {
+
+        transform:
+          translateX(5px);
+
+      }
+
+      100% {
+
+        transform:
+          translateX(0);
+
+      }
+
+    }
+
+
+    /* ==============================
+       ANIMASI KILAU
+    =============================== */
+
+    @keyframes shine {
+
+      0% {
+
+        left:
+          -120%;
+
+      }
+
+      45% {
+
+        left:
+          140%;
+
+      }
+
+      100% {
+
+        left:
+          140%;
+
+      }
+
+    }
+
+
+    /* ==============================
+       SAAT MOUSE DI ATAS
+    =============================== */
+
+    .collection-link:hover {
+
+      transform:
+        scale(1.025);
+
+      box-shadow:
+        0 10px 30px
+        rgba(123,47,247,.55);
+
+    }
+
+
+    /* ==============================
+       SAAT DITEKAN
+    =============================== */
+
+    .collection-link:active {
+
+      transform:
+        scale(.97);
+
+    }
+
+
+    /* ==============================
+       INFO
+    =============================== */
+
+    .info {
+
+      margin-top:
+        18px;
+
+      padding:
+        15px;
+
+      background:
+        #171717;
+
+      border-radius:
+        10px;
+
+      color:
+        #aaa;
+
+      font-size:
+        13px;
+
+      line-height:
+        1.6;
+
+      text-align:
+        center;
+
+    }
+
+
+    /* ==============================
+       HISTATS
+    =============================== */
+
+    #histats_counter {
+
+      margin-top:
+        20px;
+
+      text-align:
+        center;
+
+    }
+
+
+    /* ==============================
+       MOBILE
+    =============================== */
+
+    @media (max-width:600px) {
+
+      .page {
+
+        padding:
+          10px;
+
+      }
+
+
+      .header h1 {
+
+        font-size:
+        22px;
+
+      }
+
+
+      .header p {
+
+        font-size:
+        13px;
+
+      }
+
+
+      .popup {
+
+        padding:
+          24px 18px;
+
+      }
+
+
+      .popup h2 {
+
+        font-size:
+          20px;
+
+      }
+
+
+      .collection-link {
+
+        padding:
+          15px 12px;
+
+      }
+
+
+      .collection-content strong {
+
+        font-size:
+          16px;
+
+      }
+
+
+      .collection-content small {
+
+        font-size:
+          11px;
+
+      }
+
+
+      .collection-arrow {
+
+        font-size:
+          18px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main class="page">
+
+
+    <!-- =================================
+         HEADER
+    ================================== -->
+
+    <header class="header">
+
+      <h1>
+        🎬 Nonton Video
+      </h1>
+
+      <p>
+        Klik tombol play untuk mulai menonton
+      </p>
+
+    </header>
+
+
+    <!-- =================================
+         VIDEO
+    ================================== -->
+
+    <section
+      class="video-box"
+      id="videoBox">
+
+
+      <video
+        id="videoPlayer"
+        controls
+        playsinline
+        preload="metadata"
+        poster="https://jpcdn.it/img/a849a66659a389ae4b2b59230bcba18d.jpg">
+
+
+        <source
+          src="https://cdn2.videy.co/j0JIPDQb1.mp4"
+          type="video/mp4">
+
+
+        Browser kamu tidak mendukung
+        video HTML5.
+
+      </video>
+
+
+      <!-- =================================
+           LOCK OVERLAY
+      ================================== -->
+
+      <div
+        class="lock-overlay"
+        id="lockOverlay">
+
+
+        <div class="popup">
+
+
+          <div class="popup-icon">
+            ▶️
+          </div>
+
+
+          <h2>
+            Lanjutkan Video
+          </h2>
+
+
+          <p>
+            Tekan tombol di bawah
+            untuk melanjutkan video.
+          </p>
+
+
+          <button
+            type="button"
+            class="continue-button"
+            id="continueButton">
+
+            Lanjutkan Video
+
+          </button>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================
+         KUMPULAN VIDEO
+    ================================== -->
+
+    <a
+      class="collection-link"
+      href="https://www.profitableratecpmnetwork.com/jqam5pwjs?key=759fb4084cc926a5cff7602a430c42af"
+      target="_blank"
+      rel="noopener noreferrer">
+
+
+      <span class="collection-arrow">
+        ➡️
+      </span>
+
+
+      <span class="collection-content">
+
+        <strong>
+          KUMPULAN VIDEO
+        </strong>
+
+        <small>
+          🎬 Lihat video lainnya di sini
+        </small>
+
+      </span>
+
+
+      <span class="collection-arrow">
+        ⬅️
+      </span>
+
+
+    </a>
+
+
+    <!-- =================================
+         INFO
+    ================================== -->
+
+    <div class="info">
+
+      
+      <strong>H A P P Y E N J O Y😍</strong>
+      
+
+    </div>
+
+
+    <!-- =================================
+         HISTATS CONTAINER
+    ================================== -->
+
+    <div id="histats_counter"></div>
+
+
+  </main>
+
+
+
+  <!-- =================================
+       JAVASCRIPT
+  ================================== -->
+
+  <script>
+
+    /* ==============================
+       PENGATURAN
+    =============================== */
+
+    const TRIGGER_TIME = 20;
+
+
+    const DIRECT_LINK =
+      "https://www.profitableratecpmnetwork.com/jqam5pwjs?key=759fb4084cc926a5cff7602a430c42af";
+
+
+    /* ==============================
+       ELEMENT
+    =============================== */
+
+    const video =
+      document.getElementById(
+        "videoPlayer"
+      );
+
+
+    const videoBox =
+      document.getElementById(
+        "videoBox"
+      );
+
+
+    const continueButton =
+      document.getElementById(
+        "continueButton"
+      );
+
+
+    /* ==============================
+       SESSION STATUS
+    =============================== */
+
+    let unlocked =
+      sessionStorage.getItem(
+        "videoUnlocked"
+      ) === "true";
+
+
+    /* ==============================
+       VIDEO LOADED
+    =============================== */
+
+    video.addEventListener(
+      "loadedmetadata",
+      function() {
+
+        if (unlocked) {
+
+          /*
+           * User sudah melewati
+           * trigger pada sesi ini.
+           */
+
+          video.currentTime =
+            TRIGGER_TIME;
+
+        } else {
+
+          /*
+           * Pengunjung baru
+           * selalu mulai dari 0.
+           */
+
+          video.currentTime =
+            0;
+
+        }
+
+      }
+    );
+
+
+    /* ==============================
+       VIDEO TIME UPDATE
+    =============================== */
+
+    video.addEventListener(
+      "timeupdate",
+      function() {
+
+
+        /*
+         * Jika sudah unlock,
+         * jangan trigger lagi.
+         */
+
+        if (unlocked) {
+
+          return;
+
+        }
+
+
+        /*
+         * Ketika video mencapai
+         * 20 detik.
+         */
+
+        if (
+          video.currentTime >=
+          TRIGGER_TIME
+        ) {
+
+
+          /*
+           * Pause video.
+           */
+
+          video.pause();
+
+
+          /*
+           * Blur video.
+           */
+
+          videoBox.classList.add(
+            "is-locked"
+          );
+
+        }
+
+      }
+    );
+
+
+    /* ==============================
+       TOMBOL LANJUTKAN VIDEO
+    =============================== */
+
+    continueButton.addEventListener(
+      "click",
+      function() {
+
+
+        /*
+         * Tandai user sudah
+         * melewati trigger.
+         */
+
+        unlocked = true;
+
+
+        sessionStorage.setItem(
+          "videoUnlocked",
+          "true"
+        );
+
+
+        /*
+         * Hilangkan blur.
+         */
+
+        videoBox.classList.remove(
+          "is-locked"
+        );
+
+
+        /*
+         * Buka direct link.
+         */
+
+        window.open(
+          DIRECT_LINK,
+          "_blank",
+          "noopener,noreferrer"
+        );
+
+
+        /*
+         * Kembali ke posisi
+         * sekitar detik 20.
+         */
+
+        video.currentTime =
+          TRIGGER_TIME;
+
+
+        /*
+         * Lanjutkan video.
+         */
+
+        video.play()
+          .catch(
+            function() {
+
+              /*
+               * Beberapa browser dapat
+               * meminta user menekan play.
+               */
+
+            }
+          );
+
+      }
+    );
+
+
+    /* ==============================
+       USER KEMBALI KE TAB
+    =============================== */
+
+    document.addEventListener(
+      "visibilitychange",
+      function() {
+
+
+        if (
+          document.visibilityState ===
+          "visible"
+        ) {
+
+
+          if (unlocked) {
+
+
+            /*
+             * Pastikan video tidak
+             * kembali ke awal.
+             */
+
+            if (
+              video.currentTime <
+              TRIGGER_TIME
+            ) {
+
+              video.currentTime =
+                TRIGGER_TIME;
+
+            }
+
+          }
+
+        }
+
+      }
+    );
+
+  </script>
+
+
+
+  <!-- =================================
+       HISTATS
+  ================================== -->
+
+  <script type="text/javascript">
+
+    var _Hasync =
+      _Hasync || [];
+
+
+    _Hasync.push([
+      'Histats.start',
+      '1,5043495,4,511,95,18,00000000'
+    ]);
+
+
+    _Hasync.push([
+      'Histats.fasi',
+      '1'
+    ]);
+
+
+    _Hasync.push([
+      'Histats.track_hits',
+      ''
+    ]);
+
+
+    (function() {
+
+      var hs =
+        document.createElement(
+          'script'
+        );
+
+
+      hs.type =
+        'text/javascript';
+
+
+      hs.async = true;
+
+
+      hs.src =
+        '//s10.histats.com/js15_as.js';
+
+
+      document
+        .getElementsByTagName('head')[0]
+        .appendChild(hs);
+
+    })();
+
+  </script>
+
+
+  <!-- =================================
+       HISTATS NOSCRIPT
+  ================================== -->
+
+  <noscript>
+
+    <a
+      href="/"
+      target="_blank">
+
+      <img
+        src="//sstatic1.histats.com/0.gif?5043495&101"
+        alt="traffic analysis"
+        border="0">
+
+    </a>
+
+  </noscript>
+
+
+</body>
+</html>
